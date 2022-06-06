@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+
+html{
+   font-size:10px; 
+   scroll-behavior: smooth;
+   font-family:'Kdam Thmor Pro', sans-serif;
+} 
+
+a{
+text-decoration: none;
+   }
+
+img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+
+p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+}
+
+.container{
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+/*Seção de apresentação*/
+
+#presentation{
+    background-image: url(background2.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#presentation h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal ease forwards;
+}
+
+#presentation h1:nth-child(1) {
+    animation-delay: 1.4s;
+}
+#presentation h1:nth-child(2) {
+    animation-delay: 2.4s;
+}
+
+
+#presentation h2::before{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    content: "Bebam água";
+    animation: animate 2s ease forwards;
+    animation-delay: 2.8s;  
+    
+}
+
+
+#presentation .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: gold;
+    background-color: transparent;
+    border: 2px solid gold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .5s ease;
+    transition-property: background-color, color; 
+}
+
+#presentation .cta:hover{
+    color: white;
+    font-weight: 500;
+    background-color: gold;
+}
+
+#presentation h1 span{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 0;
+    animation: text_reveal_box 2s ease;
+    background-color: gold;
+}
+
+
+#presentation h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+#presentation h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+
+
+#presentation::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+
+/*Seção de Portifólio*/
+
+
+.fundo {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+
+    
+}
+
+#portfolio .portfolio{
+   flex-direction: column; 
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 30px 0;
+   
+}
+
+#portfolio .portfolio-header h1{
+    margin-bottom: 50px;
+}
+
+#portfolio .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#portfolio .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#portfolio .project-info{
+    padding: 0;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(48,48,97,1) 50%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+
+#portfolio .project-info2{
+    padding: 0px 0px 0px 50px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(255,255,255) 100%), url('./água.jpg');
+    background-blend-mode: darken;
+    background-position: center top;
+    background-size: cover;
+    color: white;
+}
+
+#portfolio .project-info3{
+    padding: 0px 0px 0px 50px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(48,48,97,1) 50%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+
+#portfolio .project-info h1 {
+    
+    width: 100%;
+    display: flex;
+    font-size: 2.5rem;
+    color: gold;
+    
+    
+}
+
+#portfolio .project-info2 h1 {
+    min-height: 6vh;
+    width: 100%;
+    display: flex;
+    font-size: 2.6rem;
+    font-weight: 400px;
+    color: gold;
+      
+}
+
+#portfolio .project-info3 h1 {
+    min-height: 6vh;
+    width: 100%;
+    display: flex;
+    font-size: 2.6rem;
+    font-weight: 400px;
+    color: gold;
+      
+}
+
+#portfolio .project-info2 h2 {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top:10px;
+   
+}
+
+#portfolio .project-info3 h2 {
+    display: flex;
+    margin: 10px 0px 2% 0px;
+    font-size: 1.3rem;
+    font-weight: 500;
+   
+}
+
+#portfolio .project-info2 p{
+    width: 45%;
+    margin-top:30px;
+    line-height: 2;
+}
+
+#portfolio .project-info3 p{
+    width: 45%;
+    margin-top:20px;
+    line-height: 2;
+}
+
+#portfolio .title {
+    width: 20%; 
+    margin-left:-20px;
+    transform: rotate(-90deg);
+}
+
+#portfolio .text {
+    width: 80%; 
+    margin-left: 15%; 
+    margin-top:-50px;
+}
+
+#portfolio .title1 {
+    padding-left: 50px;
+    width: 50%; 
+    
+}
+
+#portfolio .title2 {
+    width: 100%; 
+    padding-bottom: 5px;
+    padding-left: 50px;
+    margin-left: 45%;
+}
+
+
+#portfolio .text1 {
+    width: 50%; 
+    margin-right: 15%;
+    
+}
+
+#portfolio .text2 {
+    width: 50%; 
+    margin-left: 45%;
+    margin-bottom:10px;
+    padding-left: 50px;
+}
+
+#portfolio ul{
+    font-size: 1.7rem;
+    padding-left: 50px;
+}
+
+
+#portfolio .project-img {
+    flex-basis: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#portfolio .project-img:after {
+    content: '';
+    position:absolute;
+    left: 0;
+    top:0;
+    height:100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.5;
+}
+
+#portfolio .project-img img {
+    transition: 0.5s ease transform;
+}
+
+#portfolio .project-item:hover .project-img img{
+    transform: scale(1.1);
+    
+}
+
+/*Seção de Rodapé*/
+
+
+footer div{
+    height: 80px;
+    font-size: 1.3rem;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+/*keyframes*/
+@keyframes text_reveal {
+    100%{
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name{
+    100%{
+        color: gold;
+        font-weight: 500px;
+    }
+
+}
+
+
+
+@keyframes animate {
+    50%{
+        
+        content:"Bebam água";
+        color: gold;
+    
+    }
+    100%{
+        
+        content:"Gabriel";
+        color: gold;
+    
+    }
+ 
+}
+
+@keyframes text_reveal_box {
+    50%{
+        width:100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left:100%;
+    }
+}
+
+
+
+/*Media Query*/
+@media only screen and (min-width:768px) {
+    #portfolio .project-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #portfolio .all-projects .project-info{
+        height: 100%;
+    }
+    #portfolio .all-projects .project-img{
+        height: 100%;
+    }
+    #portfolio .project-item:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #presentation .cta {
+        display: block;
+        padding: 10px;
+    }
+
+
+    #portfolio .project-info{
+        padding: 0px 0px 20px 0px;
+    }
+
+    #portfolio .title {
+        width: 20%; 
+        height: 25px;
+        margin-top: 100px;
+    }
+    
+    #portfolio .text {
+        width: 75%;
+    }
+
+    #portfolio .project-info2{
+        padding: 2px 0px 0px 25px;
+        background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 25%, rgba(255,255,255) 100%), url('./água.jpg');
+        background-blend-mode: darken;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    #portfolio .project-info2 h1 {
+        margin-top:30px;
+    }
+
+    #portfolio .project-info2 p{
+        width: 90%;
+        padding: 0px 0px 30px 0px;
+        font-size:1.3rem;
+    }
+
+    #portfolio .project-info3{
+        padding: 20px 0px 0px 30px;
+    }
+
+    #portfolio .project-info3 p{
+        width: 40%;
+        margin-top:20px;
+        line-height: 2;
+        margin-left:-25px;
+    }
+
+    #portfolio .project-info3 ul{
+        padding: 0;
+        margin-left: 20px;
+    }
+
+}
